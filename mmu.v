@@ -18,15 +18,15 @@ reg [7:0] rom[255:0];
 
 initial begin
 	//$readmemh("rom.mem", rom, 0);
-	rom[0] = 8'h05;
-	rom[1] = 8'hBA;
-	rom[2] = 8'hAD;
-	rom[3] = 8'h05;
-	rom[4] = 8'hF0;
-	rom[5] = 8'h0D;
+	rom[0] = 8'hff; //8'h05;
+	rom[1] = 8'hff; //8'hBA;
+	rom[2] = 8'hff; //8'hAD;
+	rom[3] = 8'hff; //8'h05;
+	rom[4] = 8'hff; //8'hF0;
+	rom[5] = 8'hff; //8'h0D;
 	rom[6] = 8'h10;
 	rom[7] = 8'h00;
-	rom[8] = 8'h01;
+	rom[8] = 8'h00;
 	rom[9] = 8'h00;
 	rom[10] = 8'h00;
 	rom[11] = 8'h00;
