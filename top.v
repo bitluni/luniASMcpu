@@ -37,9 +37,9 @@ wire [1:0] byteCount;
 
 reg [31:0] clockCounter = 0;
 
-wire clk2 = clockCounter[20];
+wire clk2 = clockCounter[22];
 
-mmu memEmu (.rst(!nrst), .clk(clk2),
+mmu memEmu (.rst(nrst), .clk(clk2),
 	.address(address),
 	.read(read),
 	.dataOut(dataIn),
@@ -49,7 +49,7 @@ mmu memEmu (.rst(!nrst), .clk(clk2),
 	.dataOutReady(dataInReady),
 	.dataInReady(dataOutReady));
 
-cpu cpu0 (.rst(!nrst), .clk(clk2),
+cpu cpu0 (.rst(nrst), .clk(clk2),
 	.address(address),
 	.read(read),
 	.dataIn(dataIn),
@@ -61,7 +61,7 @@ cpu cpu0 (.rst(!nrst), .clk(clk2),
 
 reg [7:0] busByte = 0;
 reg [7:0] cachedInByte = 0;
-assign io = ioIsInput ? 8'dZ : busByte;
+//assign io = ioIsInput ? 8'dZ : busByte;
 
 //assign led = clockCounter[24:20];//~ledcounter;
 
@@ -71,7 +71,9 @@ assign led = ledFlop;
 always @(posedge clk) begin
     clockCounter <= clockCounter + 1;
 	//if(write && address[15:8] == 0) begin
-		ledFlop <= ~address[5:0];//dataOut[5:0];
+		ledFlop[4:0] <= ~dataIn[4:0];
+		ledFlop[5:5] <= ~clk2;
+		//ledFlop <= ~address[5:0];//dataIn[5:0];
 	//end
 end
 
