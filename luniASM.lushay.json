@@ -1,0 +1,5 @@
+{
+    "name": "luniASM",
+    "includedFiles": "all",
+	"board": "tangnano9k"
+}

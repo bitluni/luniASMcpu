@@ -1,0 +1,95 @@
+IO_LOC  "io[7]" 69;
+IO_PORT "io[7]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[6]" 68;
+IO_PORT "io[6]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[5]" 57;
+IO_PORT "io[5]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[4]" 56;
+IO_PORT "io[4]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[3]" 55;
+IO_PORT "io[3]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[2]" 54;
+IO_PORT "io[2]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[1]" 53;
+IO_PORT "io[1]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "io[0]" 51;
+IO_PORT "io[0]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[1]" 71;
+IO_PORT "out[1]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[2]" 72;
+IO_PORT "out[2]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[3]" 73;
+IO_PORT "out[3]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[4]" 74;
+IO_PORT "out[4]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[5]" 75;
+IO_PORT "out[5]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[6]" 76;
+IO_PORT "out[6]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[7]" 77;
+IO_PORT "out[7]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[0]" 29;
+IO_PORT "in[0]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[1]" 30;
+IO_PORT "in[1]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[2]" 33;
+IO_PORT "in[2]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[3]" 34;
+IO_PORT "in[3]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[4]" 40;
+IO_PORT "in[4]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[5]" 35;
+IO_PORT "in[5]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[6]" 41;
+IO_PORT "in[6]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "in[7]" 42;
+IO_PORT "in[7]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "out[0]" 70;
+IO_PORT "out[0]" IO_TYPE=LVCMOS33;
+
+IO_LOC  "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "led[0]" 10;
+IO_PORT "led[0]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "led[1]" 11;
+IO_PORT "led[1]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "led[2]" 13;
+IO_PORT "led[2]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "led[3]" 14;
+IO_PORT "led[3]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "led[4]" 15;
+IO_PORT "led[4]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "led[5]" 16;
+IO_PORT "led[5]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+IO_LOC  "nrst" 3;
+IO_PORT "nrst" IO_TYPE=LVCMOS33;
