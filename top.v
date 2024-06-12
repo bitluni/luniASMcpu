@@ -61,7 +61,7 @@ cpu cpu0 (.rst(!nrst), .clk(clk2),
 
 reg [7:0] busByte = 0;
 reg [7:0] cachedInByte = 0;
-assign io = ioIsInput ? 8'dZ : busByte;
+assign io = busByte; //ioIsInput ? 8'dZ : busByte;
 
 //assign led = clockCounter[24:20];//~ledcounter;
 
@@ -71,7 +71,9 @@ assign led = ledFlop;
 always @(posedge clk) begin
     clockCounter <= clockCounter + 1;
 	//if(write && address[15:8] == 0) begin
-		ledFlop <= ~address[5:0];//dataOut[5:0];
+		//ledFlop <= ~address[5:0];//dataOut[5:0];
+		ledFlop[4:0] <= ~dataIn[4:0];
+		ledFlop[5:5] <= ~clk2;
 	//end
 end
 
