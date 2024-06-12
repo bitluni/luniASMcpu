@@ -1,10 +1,10 @@
 module top
 (
-	input nrst,
+    input nrst,
     input clk,
-	inout [7:0] io,
-	input [7:0] in,
-	output [7:0] out,
+    inout [7:0] io,
+    input [7:0] in,
+    output [7:0] out,
     output [5:0] led
 );
 
@@ -40,24 +40,24 @@ reg [31:0] clockCounter = 0;
 wire clk2 = clockCounter[22];
 
 mmu memEmu (.rst(nrst), .clk(clk2),
-	.address(address),
-	.read(read),
-	.dataOut(dataIn),
-	.write(write),
-	.dataIn(dataOut),
-	.byteCount(byteCount),
-	.dataOutReady(dataInReady),
-	.dataInReady(dataOutReady));
+    .address(address),
+    .read(read),
+    .dataOut(dataIn),
+    .write(write),
+    .dataIn(dataOut),
+    .byteCount(byteCount),
+    .dataOutReady(dataInReady),
+    .dataInReady(dataOutReady));
 
 cpu cpu0 (.rst(nrst), .clk(clk2),
-	.address(address),
-	.read(read),
-	.dataIn(dataIn),
-	.write(write),
-	.dataOut(dataOut),
-	.byteCount(byteCount),
-	.dataInReady(dataInReady),
-	.dataOutReady(dataOutReady));
+    .address(address),
+    .read(read),
+    .dataIn(dataIn),
+    .write(write),
+    .dataOut(dataOut),
+    .byteCount(byteCount),
+    .dataInReady(dataInReady),
+    .dataOutReady(dataOutReady));
 
 reg [7:0] busByte = 0;
 reg [7:0] cachedInByte = 0;
@@ -70,11 +70,11 @@ assign led = ledFlop;
 
 always @(posedge clk) begin
     clockCounter <= clockCounter + 1;
-	//if(write && address[15:8] == 0) begin
-		ledFlop[4:0] <= ~dataIn[4:0];
-		ledFlop[5:5] <= ~clk2;
-		//ledFlop <= ~address[5:0];//dataIn[5:0];
-	//end
+    //if(write && address[15:8] == 0) begin
+    	ledFlop[4:0] <= ~dataIn[4:0];
+    	ledFlop[5:5] <= ~clk2;
+    	//ledFlop <= ~address[5:0];//dataIn[5:0];
+    //end
 end
 
 endmodule
